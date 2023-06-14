@@ -5,7 +5,7 @@ export default function App({ Component, pageProps }) {
   return (
     <div>
       <Head>
-        {/* <link
+        <link
           rel="icon"
           type="image/png"
           href="https://testoniadvogadas.com.br/icon.png"
@@ -55,7 +55,7 @@ export default function App({ Component, pageProps }) {
         <meta
           property="twitter:image"
           content="https://www.testoniadvogadas.com.br/og.png"
-        /> */}
+        />
       </Head>
       <Component {...pageProps} />
     </div>
