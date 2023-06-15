@@ -1,5 +1,6 @@
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
+import axios from "axios";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 
@@ -9,17 +10,16 @@ export default function Blog() {
   const router = useRouter();
 
   const load = () => {
-    // axios
-    //   .get("/api/blog/list")
-    //   .then(function (response) {
-    //     setPosts(response.data);
-    //     setLoading(false);
-    //   })
-    //   .catch(function (error) {
-    //     console.log(error);
-    //     setLoading(false);
-    //   });
-    setLoading(false);
+    axios
+      .get("https://www.testoniadvogadas.com.br/api/blog/list")
+      .then(function (response) {
+        setPosts(response.data);
+        setLoading(false);
+      })
+      .catch(function (error) {
+        console.log(error);
+        setLoading(false);
+      });
   };
 
   useEffect(() => {
