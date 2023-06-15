@@ -16,7 +16,7 @@ export default async function handler(req, res) {
   `;
 
   const msg = {
-    to: "jean.mayer@ae.studio",
+    to: "contato@testoniadvogadas.com.br",
     from: email,
     subject: "Contato do site",
     text: messageContent,

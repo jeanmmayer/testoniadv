@@ -43,7 +43,7 @@ export default function Contact() {
     <div className="relative isolate">
       <div className="mx-auto grid max-w-7xl grid-cols-1 lg:grid-cols-2">
         <div
-          className="relative px-6 pb-20 pt-24 sm:pt-32 lg:static lg:px-8 lg:py-48"
+          className="relative px-6 pb-20 pt-24 sm:pt-32 lg:static lg:px-8 "
           id="contato"
         >
           <div className="mx-auto max-w-xl lg:mx-0 lg:max-w-lg">
@@ -106,10 +106,7 @@ export default function Contact() {
             </dl>
           </div>
         </div>
-        <form
-          onSubmit={submit}
-          className="px-6 pb-24 pt-20 sm:pb-32 lg:px-8 lg:py-48"
-        >
+        <form onSubmit={submit} className="px-6 pb-24 pt-20 sm:pb-32 lg:px-8">
           <div className="mx-auto max-w-xl lg:mr-0 lg:max-w-lg">
             <div className="grid grid-cols-1 gap-x-8 gap-y-6">
               <div className="sm:col-span-2">
@@ -175,7 +172,7 @@ export default function Contact() {
                   htmlFor="message"
                   className="block text-sm font-semibold leading-6 text-gray-900"
                 >
-                  Message
+                  Mensagem
                 </label>
                 <div className="mt-2.5">
                   <textarea
