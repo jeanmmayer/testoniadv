@@ -29,10 +29,10 @@ export default function BlogPost() {
           "pt-BR"
         );
         setPostDate(postDate);
-        setLoading(true);
+        setLoading(false);
       })
       .catch((error) => {
-        setLoading(true);
+        setLoading(false);
       });
   };
 
@@ -42,18 +42,10 @@ export default function BlogPost() {
     }
   }, [isReady]);
 
-  if (loading) {
-    return (
-      <div className="min-h-screen">
-        <Header showLogo={true} />
-        <div className="text-center mt-16 w-full">Carregando...</div>
-      </div>
-    );
-  }
-
   return (
     <div className="min-h-screen">
       <Header showLogo={true} />
+      {loading && <div className="text-center mt-16 w-full">Carregando...</div>}
       <div className="py-24 sm:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl">
@@ -78,10 +70,10 @@ export default function BlogPost() {
                   <h3 className="mt-3 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600">
                     {post?.titulo}
                   </h3>
-                  <p
-                    className="mt-5 line-clamp-3 text-sm leading-6 text-gray-600"
+                  <pre
+                    className="mt-5 text-sm leading-6 text-gray-600 whitespace-pre-wrap	"
                     dangerouslySetInnerHTML={{ __html: post?.conteudo?.html }}
-                  ></p>
+                  ></pre>
                 </div>
                 <div className="relative mt-8 flex items-center gap-x-4">
                   {post?.fotoAutor?.url && (
