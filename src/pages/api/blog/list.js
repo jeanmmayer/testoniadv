@@ -1,38 +1,41 @@
-import axios from "axios";
-
 export default async function handler(req, res) {
   try {
-    await axios({
-      url: process.env.HYGRAPH_API_URL,
-      method: "post",
-      data: {
+    await fetch(process.env.HYGRAPH_API_URL, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
         query: `
-        {
-          blogPosts {
-            id
-            autor
-            dataDePublicacao
-            nomeDaUrl
-            titulo
-            preview
-            fotoAutor {
-              url
-            }
-            fotoDeCapa {
-              url
-            }
-            conteudo {
-              html
+          {
+            blogPosts {
+              id
+              autor
+              dataDePublicacao
+              nomeDaUrl
+              titulo
+              preview
+              fotoAutor {
+                url
+              }
+              fotoDeCapa {
+                url
+              }
+              conteudo {
+                html
+              }
             }
           }
-        }
-          `,
-      },
-    }).then((result) => {
-      console.log("retornou", result.data.data);
-      res.json(result.data.data.blogPosts);
-    });
+        `,
+      }),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log("retornou", data.data);
+        res.json(data.data.blogPosts);
+      });
   } catch (error) {
+    console.log(error);
     res.json({ status: false, message: error.message });
   }
 }
