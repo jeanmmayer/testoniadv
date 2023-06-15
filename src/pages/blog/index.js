@@ -9,9 +9,13 @@ export default function Blog() {
   const router = useRouter();
 
   const load = () => {
-    fetch("https://www.testoniadvogadas.com.br/api/blog/list")
+    fetch("/api/blog/list")
       .then(function (response) {
-        setPosts(response.data);
+        return response.json();
+      })
+      .then(function (data) {
+        console.log(data);
+        setPosts(data);
         setLoading(false);
       })
       .catch(function (error) {

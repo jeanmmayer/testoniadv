@@ -1,6 +1,5 @@
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
-import axios from "axios";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 
@@ -14,19 +13,25 @@ export default function BlogPost() {
   const load = () => {
     const slug = router.query.slug;
 
-    axios
-      .post("https://www.testoniadvogadas.com.br/api/blog/post", {
-        slug,
-      })
-      .then(function (response) {
-        setPost(response.data[0]);
-        const postDate = new Date(
-          response.data[0].dataDePublicacao
-        ).toLocaleDateString("pt-BR");
+    fetch("/api/blog/post", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        slug: slug,
+      }),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        setPost(data[0]);
+        const postDate = new Date(data[0].dataDePublicacao).toLocaleDateString(
+          "pt-BR"
+        );
         setPostDate(postDate);
         setLoading(true);
       })
-      .catch(function (error) {
+      .catch((error) => {
         setLoading(true);
       });
   };
