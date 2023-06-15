@@ -5,13 +5,6 @@ import Team from "@/components/Team";
 import Link from "next/link";
 import { ToastContainer } from "react-toastify";
 
-export const goTo = (id) => {
-  const element = document.getElementById(id);
-  if (element) {
-    element.scrollIntoView({ behavior: "smooth" });
-  }
-};
-
 export default function Home() {
   return (
     <div className="bg-transparent">

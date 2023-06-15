@@ -5,6 +5,17 @@ import "react-toastify/dist/ReactToastify.css";
 export default function App({ Component, pageProps }) {
   return (
     <div className="bg">
+      <a
+        target={"_blank"}
+        rel="noreferrer"
+        href="https://api.whatsapp.com/send?phone=554792107361"
+        className="fixed right-4 bottom-4 z-90"
+        style={{
+          zIndex: 99999999,
+        }}
+      >
+        <img src="/whatsapp.png" className="h-14 pulse" />
+      </a>
       <Head>
         <link rel="icon" type="image/png" href="/icon.png" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
