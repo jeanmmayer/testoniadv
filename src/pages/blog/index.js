@@ -9,7 +9,7 @@ export default function Blog() {
   const router = useRouter();
 
   const load = () => {
-    fetch("/api/blog/list")
+    fetch("/api/list")
       .then(function (response) {
         return response.json();
       })
