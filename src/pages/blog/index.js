@@ -1,3 +1,9 @@
+import Header from "@/components/Header";
+
 export default function Blog() {
-  return <div>blog</div>;
+  return (
+    <div>
+      <Header showLogo={true} />
+    </div>
+  );
 }

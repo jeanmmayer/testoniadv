@@ -25,3 +25,11 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+.montserrat {
+  font-family: "Montserrat";
+}
+
+.bg {
+  background-image: url("https://www.testoniadvogadas.com.br/bg.png");
+}
