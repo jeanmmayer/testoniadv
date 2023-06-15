@@ -15,7 +15,7 @@ export default function BlogPost() {
     const slug = router.query.slug;
 
     axios
-      .post("/api/blog/post", {
+      .post("https://www.testoniadvogadas.com.br/api/blog/post", {
         slug,
       })
       .then(function (response) {
