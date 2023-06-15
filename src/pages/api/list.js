@@ -1,5 +1,7 @@
 export default async function handler(req, res) {
   try {
+    console.log("wtf", process.env.HYGRAPH_API_URL);
+
     await fetch(process.env.HYGRAPH_API_URL, {
       method: "POST",
       headers: {
