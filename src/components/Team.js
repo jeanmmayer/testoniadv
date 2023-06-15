@@ -20,7 +20,7 @@ const people = [
 
 export default function Team() {
   return (
-    <div className="py-24 md:py-32 lg:py-40" id="a-equipe">
+    <div className="py-24" id="a-equipe">
       <div className="mx-auto max-w-7xl gap-x-8 gap-y-20 px-6 lg:px-8">
         <div className="mx-auto max-w-2xl">
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl text-center montserrat w-full m-auto">
