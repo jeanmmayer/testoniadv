@@ -80,9 +80,11 @@ export default function Contact() {
                 <dd>
                   <a
                     className="hover:text-gray-900"
-                    href="tel:+1 (555) 234-5678"
+                    target={"_blank"}
+                    rel="noreferrer"
+                    href="https://api.whatsapp.com/send?phone=554792107361"
                   >
-                    +55 (47) 123456789
+                    +55 (47) 9210-7361
                   </a>
                 </dd>
               </div>
