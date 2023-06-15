@@ -1,6 +1,5 @@
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
-import axios from "axios";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 
@@ -10,16 +9,17 @@ export default function Blog() {
   const router = useRouter();
 
   const load = () => {
-    axios
-      .get("/api/blog/list")
-      .then(function (response) {
-        setPosts(response.data);
-        setLoading(false);
-      })
-      .catch(function (error) {
-        console.log(error);
-        setLoading(false);
-      });
+    // axios
+    //   .get("/api/blog/list")
+    //   .then(function (response) {
+    //     setPosts(response.data);
+    //     setLoading(false);
+    //   })
+    //   .catch(function (error) {
+    //     console.log(error);
+    //     setLoading(false);
+    //   });
+    setLoading(false);
   };
 
   useEffect(() => {
@@ -50,7 +50,7 @@ export default function Blog() {
                     className="flex max-w-xl flex-col items-start justify-between border-t pt-12 mb-12 cursor-pointer p-4"
                     onClick={() => router.push(`/blog/${post.nomeDaUrl}`)}
                   >
-                    {/* {post.fotoDeCapa?.url && (
+                    {post.fotoDeCapa?.url && (
                       <img
                         src={post.fotoDeCapa.url}
                         className="h-48 mb-5 rounded"
@@ -82,8 +82,8 @@ export default function Blog() {
                           {post.autor}
                         </p>
                         <p className="text-gray-600">Advogada</p>
-                      </div> */}
-                    {/* </div> */}
+                      </div>
+                    </div>
                   </article>
                 );
               })}
