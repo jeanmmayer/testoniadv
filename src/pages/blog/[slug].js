@@ -37,9 +37,14 @@ export default function BlogPost() {
     }
   }, [isReady]);
 
-  useEffect(() => {
-    console.log(post);
-  }, [post]);
+  if (loading) {
+    return (
+      <div className="min-h-screen">
+        <Header showLogo={true} />
+        <div className="text-center mt-16 w-full">Carregando...</div>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen">
