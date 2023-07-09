@@ -5,14 +5,14 @@ const people = [
     name: "Carina Testoni Greiffo",
     role: "",
     imageUrl: "/carina.png",
-    bio: `Carina Testoni Greiffo é advogada, inscrita na OAB/SC sob o nº 46.799, graduada pela Universidade da Região de Joinville - UNIVILLE, especialista em Direito Processual Civil, bem como em Direito Digital e Compliance, pelo Instituto Damásio de Direito. Possui experiência na advocacia, no contencioso e consultivo, nas áreas de direito civil e bancário. <br /> <br />Possui anos de experiência na advocacia, inclusive em funções de liderança e assessoramento jurídico, que contribuem para uma visão sistêmica dos processos, com desempenho proativo e diligente em projetos de consultoria jurídica e em processos judiciais litigiosos. <br /> <br /> Seu interesse por inovação e tecnologia a coloca por dentro das soluções seguras e estratégias eficientes em sua atuação profissional.`,
+    bio: `<div style="text-align: justify">Carina Testoni Greiffo é advogada, inscrita na OAB/SC sob o nº 46.799, graduada pela Universidade da Região de Joinville - UNIVILLE, especialista em Direito Processual Civil, bem como em Direito Digital e Compliance, pelo Instituto Damásio de Direito. Possui experiência na advocacia, no contencioso e consultivo, nas áreas de direito civil e bancário. <br /> <br />Possui anos de experiência na advocacia, inclusive em funções de liderança e assessoramento jurídico, que contribuem para uma visão sistêmica dos processos, com desempenho proativo e diligente em projetos de consultoria jurídica e em processos judiciais litigiosos. <br /> <br /> Seu interesse por inovação e tecnologia a coloca por dentro das soluções seguras e estratégias eficientes em sua atuação profissional.</div>`,
     linkedinUrl: "https://www.linkedin.com/in/carinatestonigreiffo/",
   },
   {
     name: "Thaís Cidral Testoni",
     role: "",
     imageUrl: "/thais.png",
-    bio: `Thaís Cidral Testoni é advogada, inscrita na OAB/SC sob o nº 47.213, graduada pela Universidade da Região de Joinville - UNIVILLE, especialista em Direito Societário e Empresarial pela Faculdade CESUSC e MBA em Gestão Empresarial pela Universidade Positivo. Possui experiência na advocacia, especialmente no contencioso, nas áreas de direito privado e público. <br /> <br />Durante a sua trajetória acadêmica, participou do programa de intercâmbio na Faculdade de Direito da Universidade de Coimbra/PT, além de ter participado da 20ª Edição da Competição de Julgamento Simulado do Sistema Interamericano de Direitos Humanos na American University - Washington College of Law, obtendo premiação de Melhor Memorial do Estado em Língua Portuguesa. <br /> <br /> A dedicação em diferentes projetos e áreas do direito contribuem para uma atuação profissional dinâmica.`,
+    bio: `<div style="text-align: justify">Thaís Cidral Testoni é advogada, inscrita na OAB/SC sob o nº 47.213, graduada pela Universidade da Região de Joinville - UNIVILLE, especialista em Direito Societário e Empresarial pela Faculdade CESUSC e MBA em Gestão Empresarial pela Universidade Positivo. Possui experiência na advocacia, especialmente no contencioso, nas áreas de direito privado e público. <br /> <br />Durante a sua trajetória acadêmica, participou do programa de intercâmbio na Faculdade de Direito da Universidade de Coimbra/PT, além de ter participado da 20ª Edição da Competição de Julgamento Simulado do Sistema Interamericano de Direitos Humanos na American University - Washington College of Law, obtendo premiação de Melhor Memorial do Estado em Língua Portuguesa. <br /> <br /> A dedicação em diferentes projetos e áreas do direito contribuem para uma atuação profissional dinâmica.</div>`,
     linkedinUrl:
       "https://www.linkedin.com/in/tha%C3%ADs-cidral-testoni-b63b4756/",
   },
@@ -20,10 +20,10 @@ const people = [
 
 export default function Team() {
   return (
-    <div className="py-24" id="a-equipe">
+    <div className="py-24 bg-[#a27560]" id="a-equipe">
       <div className="mx-auto max-w-7xl gap-x-8 gap-y-20 px-6 lg:px-8">
         <div className="mx-auto max-w-2xl">
-          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl text-center montserrat w-full m-auto">
+          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl text-center montserrat w-full m-auto text-white pb-12">
             A Equipe
           </h2>
           <p className="mt-6 text-lg leading-8 text-gray-600">
@@ -34,23 +34,23 @@ export default function Team() {
         </div>
         <ul
           role="list"
-          className=" grid max-w-xl grid-cols-1 gap-x-8 gap-y-20 sm:grid-cols-2 lg:max-w-4xl lg:gap-x-16 xl:col-span-2 m-auto"
+          className=" grid max-w-xl text-white grid-cols-1 gap-x-8 gap-y-20 sm:grid-cols-2 lg:max-w-4xl lg:gap-x-16 xl:col-span-2 m-auto"
         >
           {people.map((person) => (
             <li key={person.name}>
               <img
-                className=" w-full rounded-2xl object-cover"
+                className=" w-full rounded-2xl object-cover min-h-[400px]"
                 src={person.imageUrl}
                 alt=""
               />
-              <h3 className="mt-6 text-lg font-semibold leading-8 text-gray-900">
+              <h3 className="mt-6 text-lg font-semibold leading-8 text-white">
                 {person.name}
               </h3>
-              <p className="text-base leading-7 text-gray-600">{person.role}</p>
-              <p
-                className="mt-4 text-base leading-7 text-gray-600"
+              <p className="text-base leading-7 text-white">{person.role}</p>
+              <div
+                className="mt-4 text-base leading-7 text-white align-justify"
                 dangerouslySetInnerHTML={{ __html: person.bio }}
-              ></p>
+              ></div>
               <ul role="list" className="mt-6 flex gap-x-6">
                 <li>
                   <Link
@@ -61,7 +61,7 @@ export default function Team() {
                     <svg
                       className="h-5 w-5"
                       aria-hidden="true"
-                      fill="currentColor"
+                      fill="white"
                       viewBox="0 0 20 20"
                     >
                       <path

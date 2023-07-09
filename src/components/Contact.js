@@ -47,7 +47,7 @@ export default function Contact() {
               Contato
             </h2>
             <p className="mt-6 text-lg leading-8 text-gray-600">
-              Entre em contato com a Testoni Advogadas. A equipe está pronta
+              Entre em contato com o Testoni Advogadas. A equipe está pronta
               para ouvir e ajudar. Fale conosco hoje mesmo.
             </p>
             <dl className="mt-10 space-y-4 text-base leading-7 text-gray-600">
@@ -60,14 +60,14 @@ export default function Contact() {
                   />
                 </dt>
                 <dd>
-                  R. Dr. João Colin, 1285 - América
+                  Rua Araranguá, 50 - América
                   <br />
                   Joinville - SC
                 </dd>
               </div>
               <div className="flex gap-x-4">
                 <dt className="flex-none">
-                  <span className="sr-only">Telephone</span>
+                  <span className="sr-only">Telefone</span>
                   <svg
                     className="h-7 w-6"
                     width="24"
@@ -89,7 +89,7 @@ export default function Contact() {
                     rel="noreferrer"
                     href="https://api.whatsapp.com/send?phone=554792107361"
                   >
-                    +55 (47) 9210-7361
+                    +55 (47) 9.9210-7361
                   </a>
                 </dd>
               </div>

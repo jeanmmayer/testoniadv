@@ -32,6 +32,7 @@ body {
 
 .bg {
   background-image: url("https://www.testoniadvogadas.com.br/bg.png");
+  min-height: 100vh;
 }
 
 .pulse {
@@ -49,8 +50,8 @@ body {
     transform: scale3d(1, 1, 1);
   }
   50% {
-    -webkit-transform: scale3d(1.05, 1.05, 1.05);
-    transform: scale3d(1.05, 1.05, 1.05);
+    -webkit-transform: scale3d(1.2, 1.2, 1.2);
+    transform: scale3d(1.2, 1.2, 1.2);
   }
   100% {
     -webkit-transform: scale3d(1, 1, 1);
@@ -63,11 +64,21 @@ body {
     transform: scale3d(1, 1, 1);
   }
   50% {
-    -webkit-transform: scale3d(1.05, 1.05, 1.05);
-    transform: scale3d(1.05, 1.05, 1.05);
+    -webkit-transform: scale3d(1.2, 1.2, 1.2);
+    transform: scale3d(1.2, 1.2, 1.2);
   }
   100% {
     -webkit-transform: scale3d(1, 1, 1);
     transform: scale3d(1, 1, 1);
+  }
+}
+
+.limit {
+  display: flex;
+}
+
+@media screen and (max-width: 1100px) {
+  .limit {
+    flex-direction: column !important;
   }
 }
