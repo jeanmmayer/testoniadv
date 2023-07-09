@@ -12,7 +12,7 @@ export default function Blog() {
     fetch(
       `${
         process.env.NEXT_PUBLIC_ENV != "local"
-          ? "https://testoniadvogadas.com.br"
+          ? "https://www.testoniadvogadas.com.br"
           : ""
       }/api/list`
     )
