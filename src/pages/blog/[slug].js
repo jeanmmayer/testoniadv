@@ -45,7 +45,7 @@ export default function BlogPost() {
   return (
     <div className="min-h-screen">
       <Header showLogo={true} />
-      {loading && <div className="text-center mt-16 w-full">Carregando...</div>}
+      {loading && <div className="text-center pt-36 w-full">Carregando...</div>}
       <div className="py-24 sm:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl">
