@@ -3,8 +3,6 @@ const sgMail = require("@sendgrid/mail");
 export default async function handler(req, res) {
   const { email, message, tel, name } = req.body;
 
-  console.log({ email, message, tel, name });
-
   sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
   const messageContent = `Contato recebido do site:

@@ -30,7 +30,6 @@ export default async function handler(req, res) {
           `,
       },
     }).then((result) => {
-      console.log("voltou", result);
       res.json(result.data.data.blogPosts);
     });
   } catch (error) {

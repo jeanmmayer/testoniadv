@@ -20,12 +20,10 @@ export default function Blog() {
         return response.json();
       })
       .then(function (data) {
-        console.log(data);
         setPosts(data);
         setLoading(false);
       })
       .catch(function (error) {
-        console.log(error);
         setLoading(false);
       });
   };
