@@ -9,7 +9,13 @@ export default function Blog() {
   const router = useRouter();
 
   const load = () => {
-    fetch("/api/list")
+    fetch(
+      `${
+        process.env.NEXT_PUBLIC_ENV != "local"
+          ? "https://testoniadvogadas.com.br"
+          : ""
+      }/api/list`
+    )
       .then(function (response) {
         return response.json();
       })
