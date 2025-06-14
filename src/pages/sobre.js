@@ -7,16 +7,16 @@ export default function Sobre() {
       <Header />
       <div className="mx-auto py-24 pt-48 max-w-7xl gap-x-8 gap-y-20 px-6 lg:px-8">
         <div className="flex gap-12 flex-wrap md:flex-nowrap">
-          <div className="text-2xl p-4 border-4 border-[#a27560] rounded-lg text-justify">
+          <div className="text-2xl p-4 border-4 border-[#a27560] rounded-lg text-justify text-gray-800 dark:text-gray-200">
             Atuação com compromisso, segurança e eficiência. O Testoni Advogadas
             preza pela proximidade com o cliente, sendo sua atuação sempre
             orientada pelos princípios de ética e responsabilidade.
           </div>
           <div className="text-justify">
-            <div className="font-bold text-lg border-b-4 border-[#a27560] pb-4">
+            <div className="font-bold text-lg border-b-4 border-[#a27560] pb-4 text-gray-800 dark:text-gray-200">
               Sobre Nós
             </div>
-            <div className="pt-4">
+            <div className="pt-4 text-gray-600 dark:text-gray-300">
               O Testoni Advogadas atua em diferentes áreas do direito, tais como
               direito digital, direito de família, direito do consumidor,
               especialmente temas relacionados ao direito à saúde e planos de

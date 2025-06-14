@@ -1,7 +1,6 @@
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
-import Team from "@/components/Team";
 import Link from "next/link";
 import { ToastContainer } from "react-toastify";
 
@@ -39,7 +38,6 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <Team />
 
         <Contact />
       </main>

@@ -22,9 +22,8 @@ export default function Header({ showLogo }) {
         <div className="flex lg:flex-1">
           <Link
             href="/"
-            className={`-m-1.5 p-1.5 ${
-              showLogo ? "cursor-pointer" : "opacity-0 cursor-default"
-            }`}
+            className={`-m-1.5 p-1.5 ${showLogo ? "cursor-pointer" : "opacity-0 cursor-default"
+              }`}
           >
             <span className="sr-only">Testoni Advogadas</span>
             <img className="h-16 w-auto" src="/logo.png" alt="" />
